@@ -5,7 +5,7 @@ const PORT = 9999
 # NOTE: Godot 4 requires a secure (SSL) context to fully work when deployed. If you use
 # websockets, this example will work on localhost / your local machine, but will NOT
 # work on a deployed server.
-const USE_WEBSOCKETS = false
+const USE_WEBSOCKETS = true
 
 signal user_joined(id)
 signal player_joined(id)
