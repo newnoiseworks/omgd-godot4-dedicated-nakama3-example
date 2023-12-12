@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "3030:3030"
+    volumes:
+      - ./web-build/nginx.conf:/etc/nginx/nginx.conf
+      - ./web-build/apache.htpasswd:/etc/nginx/.htpasswd
+      - ./web-build/src:/usr/share/nginx/html
+
+  dedicated:
+    build:
+      context: ./dedicated-build
+      dockerfile: Dockerfile
+    volumes:
+      - ./dedicated-build:/app
+    ports:
+      - "9999:9999"
+      - "9999:9999/udp"
+    expose:
+      - "9999"
+      - "9999/udp"
+    working_dir: /app
+    command: godot -v -d --main-pack src/game.pck --server
+    tty: true
+
+volumes:
+  data:

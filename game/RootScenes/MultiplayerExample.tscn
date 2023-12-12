@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp8bunpan04ml"]
+
+[ext_resource type="Script" path="res://RootScenes/MultiplayerExampleController.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://4d4nyd7msvs4" path="res://Character/Character.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bo7bk58n6ehrm" path="res://Character/Player.tscn" id="4"]
+
+[node name="Experience" type="Node2D"]
+script = ExtResource("1")
+character_scene = ExtResource("3")
+player_scene = ExtResource("4")
+
+[node name="EnvironmentItems" type="Node2D" parent="."]

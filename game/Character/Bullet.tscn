@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Character/BulletController.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.7194
+height = 0.0
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -2.88479
+offset_right = 20.0
+offset_bottom = 11.1152
+scale = Vector2( 1.03635, 1 )
+text = "*"
+align = 1
+
+[connection signal="body_entered" from="." to="." method="_on_bullet_body_entered"]

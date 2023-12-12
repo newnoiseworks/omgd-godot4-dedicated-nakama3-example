@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo7bk58n6ehrm"]
+
+[ext_resource type="PackedScene" uid="uid://4d4nyd7msvs4" path="res://Character/Character.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dbc08rt6611d6" path="res://Character/r1174it7zth51.png" id="2"]
+[ext_resource type="Script" path="res://Character/PlayerController.gd" id="3"]
+
+[node name="Player" instance=ExtResource("1")]
+script = ExtResource("3")
+
+[node name="CollisionShape2D" parent="." index="0"]
+scale = Vector2(2.12, 1.9812)
+
+[node name="Godot_icon" parent="." index="2"]
+texture = ExtResource("2")

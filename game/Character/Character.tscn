@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://4d4nyd7msvs4"]
+
+[ext_resource type="Texture2D" uid="uid://clxetiicetn1r" path="res://Character/Godot_icon.svg" id="1"]
+[ext_resource type="Script" path="res://Character/CharacterController.gd" id="2"]
+[ext_resource type="PackedScene" path="res://Character/Bullet.tscn" id="3"]
+
+[sub_resource type="CircleShape2D" id="1"]
+
+[node name="Character" type="CharacterBody2D"]
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("2")
+bullet_scene = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.72, 1.6612)
+shape = SubResource("1")
+
+[node name="UsernameLabel" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -34.0
+offset_right = 21.0
+offset_bottom = -20.0
+grow_horizontal = 2
+
+[node name="Godot_icon" type="Sprite2D" parent="."]
+position = Vector2(-0.323273, -0.215964)
+scale = Vector2(0.0451975, 0.0451975)
+texture = ExtResource("1")
+
+[node name="Label" type="Label" parent="Godot_icon"]
+offset_left = -486.753
+offset_top = 508.878
+offset_right = -446.753
+offset_bottom = 522.878
+scale = Vector2(24.3451, 20.92)
+text = "||"
+
+[node name="Chamber" type="Node2D" parent="Godot_icon"]
+position = Vector2(0, 641.63)
+
+[node name="Bullet" parent="Godot_icon/Chamber" instance=ExtResource("3")]
+scale = Vector2(24.3451, 20.92)
+collision_layer = 0
+collision_mask = 0
+is_firing = false

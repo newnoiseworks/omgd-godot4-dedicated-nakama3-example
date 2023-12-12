@@ -1,0 +1,11 @@
+extends Node
+
+{{- if .profile.omgd.servers.central.host }}
+const dedicated_server_host = "{{.profile.omgd.servers.central.host}}"
+{{- else if .profile.omgd.servers.host }}
+const dedicated_server_host = "{{.profile.omgd.servers.host}}"
+{{- else }}
+const dedicated_server_host = "127.0.0.1"
+{{- end }}
+
+const version = "{{.game.version}}"
