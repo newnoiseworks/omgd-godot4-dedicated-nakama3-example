@@ -34,6 +34,8 @@ func _ready():
 		_gc = multiplayer.connect("connection_failed", _client_connect_failed)
 		_gc = multiplayer.connect("connected_to_server", _client_connect_success)
 
+	
+func setup_network_peer():
 	if USE_WEBSOCKETS:
 		_setup_network_peer_as_ws()
 	else:

@@ -10,13 +10,17 @@ config_version=5
 
 [application]
 
-run/main_scene="res://RootScenes/MultiplayerExample.tscn"
+config/name="omgd-godot4-dedicated-nakama3-example"
+run/main_scene="res://RootScenes/AppStart.tscn"
 config/features=PackedStringArray("4.2")
 
 [autoload]
 
+Nakama="*res://addons/com.heroiclabs.nakama/Nakama.gd"
 ServerConfig="*res://Autoloads/ServerConfig.gd"
 ServerManager="*res://Autoloads/ServerManager.gd"
+NakamaConfig="*res://Autoloads/NakamaConfig.gd"
+SessionManager="*res://Autoloads/SessionManager.gd"
 
 [input]
 

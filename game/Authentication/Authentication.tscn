@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://btd1pftggyi7s"]
 
-[ext_resource type="PackedScene" uid="uid://cofkf7dv18pda" path="res://RootScenes/PlayerMUX.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cp8bunpan04ml" path="res://RootScenes/MultiplayerExample.tscn" id="1"]
 [ext_resource type="Script" path="res://Authentication/AuthenticationController.gd" id="2"]
 [ext_resource type="Script" path="res://Authentication/LoginSignupController.gd" id="4"]
 

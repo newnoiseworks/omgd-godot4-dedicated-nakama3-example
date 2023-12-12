@@ -10,13 +10,13 @@ var user_ids: Array = []
 
 
 func _ready():
-	var _gc # NOTE: avoiding code warnings with a dummy var
+	ServerManager.setup_network_peer()
 
 	if ServerManager.is_server():
-		_gc = ServerManager.connect("player_joined", _add_networked_player_to_scene)
-		_gc = ServerManager.connect("player_left", _remove_networked_player_from_scene)
+		ServerManager.connect("player_joined", _add_networked_player_to_scene)
+		ServerManager.connect("player_left", _remove_networked_player_from_scene)
 	else:
-		_gc = ServerManager.connect("user_joined", _add_player_to_scene)
+		ServerManager.connect("user_joined", _add_player_to_scene)
 
 
 func _exit_tree():

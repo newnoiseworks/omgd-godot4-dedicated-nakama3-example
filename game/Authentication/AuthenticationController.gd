@@ -6,7 +6,7 @@ extends Control
 
 
 func _ready():
-	label.text = "v%s" % GameConfig.version
+	label.text = "v%s" % NakamaConfig.version
 
 	var cmd_args = OS.get_cmdline_args()
 

@@ -13,7 +13,7 @@ func _ready():
 	if ServerManager.is_server():
 		scene = load("res://RootScenes/MultiplayerExample.tscn")
 
-	get_tree().get_root().call_deferred("add_child", scene.instance())
+	get_tree().get_root().call_deferred("add_child", scene.instantiate())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
