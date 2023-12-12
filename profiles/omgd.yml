@@ -1,5 +1,5 @@
 omgd:
-  name: omgd-godot4-dedicated-nakama3
+  name: godot4-dedicated-nakama3-example
   game:
     targets:
       - build-service: build-web
