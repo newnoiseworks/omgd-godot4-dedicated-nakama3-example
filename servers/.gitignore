@@ -1,5 +1,5 @@
 config.yml
-central/data/.cookie
+nakama/data/.cookie
 
 web-build/src/*
 

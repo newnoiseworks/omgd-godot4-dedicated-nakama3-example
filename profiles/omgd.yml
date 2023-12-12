@@ -10,8 +10,9 @@ omgd:
   name: omgd-godot4-dedicated-nakama3
   servers:
     ports:
-      tcp: '"22", "3030", "9999"'
-      udp: '"9999"'
+      tcp: '"22", "3030", "7348-7351", "9999"'
+      udp: '"9999", "7348-7351"'
     services:
     - web
     - dedicated
+    - nakama
