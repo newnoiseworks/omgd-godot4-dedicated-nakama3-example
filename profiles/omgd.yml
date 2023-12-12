@@ -13,6 +13,6 @@ omgd:
       tcp: '"22", "3030", "7348-7351", "9999"'
       udp: '"9999", "7348-7351"'
     services:
-    - web
-    - dedicated
-    - nakama
+      - build-service: web
+      - build-service: dedicated
+      - build-service: nakama
