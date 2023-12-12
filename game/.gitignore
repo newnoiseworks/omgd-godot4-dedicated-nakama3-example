@@ -12,4 +12,4 @@ dist/*
 .cookie
 .DS_Store
 
-Autoloads/ServerConfig.gd
+Autoloads/NakamaConfig.gd
