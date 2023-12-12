@@ -1,4 +1,5 @@
 omgd:
+  name: omgd-godot4-dedicated-nakama3
   game:
     targets:
       - build-service: build-web
@@ -7,7 +8,6 @@ omgd:
       - build-service: build-x11-server
         copy: "game/dist/x11-server"
         to: "servers/dedicated-build/src"
-  name: omgd-godot4-dedicated-nakama3
   servers:
     ports:
       tcp: '"22", "3030", "7348-7351", "9999"'
