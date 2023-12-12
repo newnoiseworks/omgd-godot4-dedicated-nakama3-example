@@ -13,3 +13,4 @@ dist/*
 .DS_Store
 
 Autoloads/NakamaConfig.gd
+Autoloads/ServerConfig.gd
