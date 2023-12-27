@@ -10,3 +10,12 @@ character_scene = ExtResource("3")
 player_scene = ExtResource("4")
 
 [node name="EnvironmentItems" type="Node2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 469.0
+offset_top = 12.0
+offset_right = 799.0
+offset_bottom = 88.0
+text = "WASD = movement
+HL = rotation
+Spacebar = fires gun"
