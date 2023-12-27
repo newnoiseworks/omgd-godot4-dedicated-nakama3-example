@@ -8,6 +8,9 @@ services:
       - ./web-build/nginx.conf:/etc/nginx/nginx.conf
       - ./web-build/apache.htpasswd:/etc/nginx/.htpasswd
       - ./web-build/src:/usr/share/nginx/html
+    logging:
+      options:
+        max-size: "10m"
 
   dedicated:
     build:
@@ -24,6 +27,9 @@ services:
     working_dir: /app
     command: godot -v -d --main-pack src/game.pck --server
     tty: true
+    logging:
+      options:
+        max-size: "10m"
 
   postgres:
     container_name: postgres
@@ -44,6 +50,9 @@ services:
       interval: 3s
       timeout: 3s
       retries: 5
+    logging:
+      options:
+        max-size: "10m"
 
   nakama:
     container_name: nakama
@@ -75,5 +84,9 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    logging:
+      options:
+        max-size: "10m"
+
 volumes:
   data:
