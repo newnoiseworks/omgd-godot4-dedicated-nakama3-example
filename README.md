@@ -1,5 +1,7 @@
-Todo: write actual / rest of README
+# OMGD Godot 4 Dedicated Server with Nakama Example
 
-NOTE: Godot 4 requires a secure (SSL) context to fully work when deployed. If you use
-websockets, this example will work on localhost / your local machine, but will NOT
-work on a deployed server.
+This example should work alongside the [Getting Started](https://newnoiseworks.github.io/omgd/pages/getting-started/) section of the OMGD documentation. Check that out for information on how to start this up.
+
+Afterwards, visiting http://localhost:3030 in your browser should show the built web version of the game client.
+
+NOTE: Godot 4 web servers require an https context when deployed to the cloud. OMGD currently does not support https / ssl. For deployed versions, use the built executables in the `game/dist` folder, or run the game from Godot itself.
